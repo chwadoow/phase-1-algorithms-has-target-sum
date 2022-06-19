@@ -1,17 +1,41 @@
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    
+    const pairTwo = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      
+      if (array[j] === pairTwo) return true;
+    }
+  }
+  // 1 step
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  Big O notation is O(n^2) linear
 */
 
 /* 
-  Add your pseudocode here
+  //Add your pseudocode here
+  //the first for loop iterates over array elements
+  //subtracting them from target
+  //the if statement (nested) compares the subtraction results to the 
+  other elements in array .
+  
+  
 */
 
 /*
   Add written explanation of your solution here
+  //Add your pseudocode here
+  //the first for loop iterates over array elements
+  //subtracting them from target
+  //the if statement (nested) compares the subtraction results to the 
+  other elements in array .
+   
+ 
 */
 
 // You can run `node index.js` to view these console logs
